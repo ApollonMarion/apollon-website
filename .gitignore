@@ -1,0 +1,7 @@
+# Nichts Vertrauliches gehoert in diese Ablage.
+*.php
+texte/
+rueckmeldungen/
+vorschau-*.html
+zugang*
+*.log

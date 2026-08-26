@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wissen | Apollon</title>
+<meta name="description" content="Vereinswesen, EWIV und das Wissen über den Körper. Verständlich erklärt, offen zugänglich.">
+<link rel="stylesheet" href="assets/apollon.css?v=e0d6c51b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#022144">
+<link rel="stylesheet" href="assets/schriften.css"><link rel="preload" href="assets/fonts/karla-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <a class="brandmark" href="index.html"><img src="assets/schwan.svg" alt="" width="34" height="34"><span class="wm">APOLLON</span></a>
+  <nav class="main" aria-label="Hauptnavigation"><span class="item"><a class="link" href="wissen.html" aria-current="page">Wissen</a></span><span class="item"><a class="link" href="blog.html">Blog</a></span><span class="item has"><a class="link" href="entscheidung.html">Apollon</a><span class="submenu"><a href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a href="bodenplatte.html">Die Bodenplatte</a><a href="denkkreis.html">Der Denkkreis</a></span></span><span class="item"><a class="link" href="vereinsheim.html">Vereinsheim</a></span><span class="item"><a class="link" href="buch.html">Buch</a></span><span class="item has"><a class="link" href="ausstieg.html">WIB</a><span class="submenu"><a href="ausstieg.html">Der feminine Ausstieg</a><a href="ausstieg-bewerbung.html">Bewerbung</a><a href="ausstieg-impulsbuch.html">Impulsbuch</a><a href="konvaleszenz.html">Konvaleszenz</a></span></span></nav>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="handymenu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <a class="cta-btn" href="gespraech.html">Gespräch vereinbaren</a>
+</div>
+<nav class="handymenu" id="handymenu" aria-label="Menü"><a href="wissen.html" aria-current="page">Wissen</a><a href="blog.html">Blog</a><span class="gruppe">Apollon</span><a class="unter" href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a class="unter" href="bodenplatte.html">Die Bodenplatte</a><a class="unter" href="denkkreis.html">Der Denkkreis</a><a href="vereinsheim.html">Vereinsheim</a><a href="buch.html">Buch</a><span class="gruppe">WIB</span><a class="unter" href="ausstieg.html">Der feminine Ausstieg</a><a class="unter" href="ausstieg-bewerbung.html">Bewerbung</a><a class="unter" href="ausstieg-impulsbuch.html">Impulsbuch</a><a class="unter" href="konvaleszenz.html">Konvaleszenz</a><a class="hervor" href="gespraech.html">Gespräch vereinbaren</a></nav>
+</div>
+<script>
+(function(){
+  var k = document.querySelector('.burger'), m = document.getElementById('handymenu');
+  if (!k || !m) return;
+  k.addEventListener('click', function(){
+    var offen = m.classList.toggle('offen');
+    k.classList.toggle('zu', offen);
+    k.setAttribute('aria-expanded', offen ? 'true' : 'false');
+    k.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && m.classList.contains('offen')) k.click();
+  });
+})();
+</script>
+<main>
+<div class="pagehead"><div class="wrap"><p class="crumbs"><a href="index.html">Apollon</a> &rsaquo; Wissen</p><p class="kicker">Wissen</p><h1>Alles, was wir wissen, steht offen da.</h1><p class="intro">Weil Wissen, das in einem Kopf bleibt, mit diesem Kopf verschwindet.</p></div></div>
+<section class="on-white"><div class="wrap">
+  <p class="lead" style="max-width:40rem">Wir erfinden nichts Neues. Wir arbeiten mit Werkzeugen, die es seit Ewigkeiten gibt, und wir wissen, wie man sie richtig benutzt.</p>
+  <div class="three" style="margin-top:2.4rem">
+    <article class="card"><h3>Der Verein als Werkzeug</h3><p>Gründung, Statuten, Organe, Rechnungen, Gemeinnützigkeit. Erklärt so, wie man es einem Menschen erklärt und nicht einer Behörde.</p><a class="more" href="wissen-verein.html">Zum Vereinswissen</a></article>
+    <article class="card"><h3>Die EWIV, verständlich</h3><p>Die Europäische wirtschaftliche Interessenvereinigung. Ein mächtiges Werkzeug, über das kaum jemand verständlich schreibt.</p><a class="more" href="wissen-ewiv.html">Zur EWIV</a></article>
+    <article class="card"><h3>Der Körper liest mit</h3><p>Was Druck, Haltung und Füße über einen Menschen erzählen. Die Grundlage der Arbeit in der Konvaleszenz.</p><a class="more" href="wissen-koerper.html">Zum Körperwissen</a></article>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 style="max-width:22ch">Denkmodelle</h2>
+  <p style="max-width:38rem;margin-top:1rem">Ein Denkmodell ist ein Bild, das etwas Kompliziertes in einem Moment verständlich macht. Es ist der Teil des Wissens, den Menschen weitererzählen.</p>
+  <div class="two" style="margin-top:2rem">
+    <article class="card"><h3>Die Bodenplatte</h3><p>Warum zuerst der Boden kommt und dann das Haus. Und woran man merkt, dass unter dem eigenen Unternehmen keiner liegt.</p><a class="more" href="bodenplatte.html">Zum Modell</a></article>
+    <article class="card"><h3>Preis, Wert und Rückfluss</h3><p>Drei Begriffe, die ständig verwechselt werden. Wer sie auseinanderhält, rechnet anders und arbeitet ruhiger.</p><a class="more" href="#">In Arbeit</a></article>
+  </div>
+</div></section>
+
+<section class="on-white"><div class="wrap">
+  <h2>Journal und Videos</h2>
+  <p style="max-width:38rem;margin-top:1rem">Im Journal steht, was zuletzt dazugekommen ist, chronologisch. In der Mediathek liegen die Videos, fünf bis zehn Minuten, unscripted, jedes mit Transkript, damit gesprochenes Wissen auffindbar wird.</p>
+  <div class="note"><strong>Im Aufbau:</strong> Journal und Mediathek folgen, sobald die ersten Artikel und Videos stehen. Die Struktur ist angelegt.</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="footcols">
+    <div>
+      <h4 style="letter-spacing:.24em;font-size:1rem">APOLLON</h4>
+      <p style="margin-top:.6rem;max-width:26rem">Entwicklung beginnt beim Menschen.</p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul class="footlinks">
+        <li><a href="wissen.html">Wissen</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="bodenplatte.html">Die Bodenplatte</a></li>
+        <li><a href="denkkreis.html">Der Denkkreis</a></li>
+        <li><a href="vereinsheim.html">Vereinsheim</a></li>
+        <li><a href="buch.html">Buch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Wege in Bewegung</h4>
+      <ul class="footlinks">
+        <li><a href="ausstieg.html">Der feminine Ausstieg</a></li>
+        <li><a href="ausstieg-impulsbuch.html">Das Impulsbuch</a></li>
+        <li><a href="konvaleszenz.html">Konvaleszenz</a></li>
+        <li><a href="https://t.me/apollondenkkreise" target="_blank" rel="noopener">Telegram: Apollon Denkkreise</a></li>
+        <li><a href="gespraech.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+    <span style="margin-left:auto">Wirtschaftsverein WIB, Wien</span>
+  </div>
+</div></footer>
+</body></html>

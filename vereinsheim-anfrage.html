@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Das Vereinsheim anfragen | Apollon</title>
+<meta name="description" content="Anfrage für das Vereinsheim Apollon in Lengede: Firma, Ansprechpartner, Vorhaben, Zeitraum und Gruppengröße.">
+<link rel="stylesheet" href="assets/apollon.css?v=e0d6c51b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#022144">
+<link rel="stylesheet" href="assets/schriften.css"><link rel="preload" href="assets/fonts/karla-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <a class="brandmark" href="index.html"><img src="assets/schwan.svg" alt="" width="34" height="34"><span class="wm">APOLLON</span></a>
+  <nav class="main" aria-label="Hauptnavigation"><span class="item"><a class="link" href="wissen.html">Wissen</a></span><span class="item"><a class="link" href="blog.html">Blog</a></span><span class="item has"><a class="link" href="entscheidung.html">Apollon</a><span class="submenu"><a href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a href="bodenplatte.html">Die Bodenplatte</a><a href="denkkreis.html">Der Denkkreis</a></span></span><span class="item"><a class="link" href="vereinsheim.html">Vereinsheim</a></span><span class="item"><a class="link" href="buch.html">Buch</a></span><span class="item has"><a class="link" href="ausstieg.html">WIB</a><span class="submenu"><a href="ausstieg.html">Der feminine Ausstieg</a><a href="ausstieg-bewerbung.html">Bewerbung</a><a href="ausstieg-impulsbuch.html">Impulsbuch</a><a href="konvaleszenz.html">Konvaleszenz</a></span></span></nav>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="handymenu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <a class="cta-btn" href="gespraech.html">Gespräch vereinbaren</a>
+</div>
+<nav class="handymenu" id="handymenu" aria-label="Menü"><a href="wissen.html">Wissen</a><a href="blog.html">Blog</a><span class="gruppe">Apollon</span><a class="unter" href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a class="unter" href="bodenplatte.html">Die Bodenplatte</a><a class="unter" href="denkkreis.html">Der Denkkreis</a><a href="vereinsheim.html">Vereinsheim</a><a href="buch.html">Buch</a><span class="gruppe">WIB</span><a class="unter" href="ausstieg.html">Der feminine Ausstieg</a><a class="unter" href="ausstieg-bewerbung.html">Bewerbung</a><a class="unter" href="ausstieg-impulsbuch.html">Impulsbuch</a><a class="unter" href="konvaleszenz.html">Konvaleszenz</a><a class="hervor" href="gespraech.html">Gespräch vereinbaren</a></nav>
+</div>
+<script>
+(function(){
+  var k = document.querySelector('.burger'), m = document.getElementById('handymenu');
+  if (!k || !m) return;
+  k.addEventListener('click', function(){
+    var offen = m.classList.toggle('offen');
+    k.classList.toggle('zu', offen);
+    k.setAttribute('aria-expanded', offen ? 'true' : 'false');
+    k.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && m.classList.contains('offen')) k.click();
+  });
+})();
+</script>
+<main>
+<div class="pagehead"><div class="wrap"><p class="crumbs"><a href="index.html">Apollon</a> &rsaquo; <a href="vereinsheim.html">Vereinsheim</a> &rsaquo; Anfrage</p><p class="kicker">Das Vereinsheim</p><h1>Das Haus anfragen.</h1><p class="intro">Sagen Sie uns, wer Sie sind und was Sie vorhaben. Dann sagen wir Ihnen, ob das Haus dafür passt und ob es frei ist.</p></div></div>
+<section class="on-white"><div class="wrap narrow">
+  <form class="apo" method="post" action="formular.php" style="margin-top:1rem">
+    <input type="hidden" name="formular" value="Vereinsheim, Anfrage">
+    <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="hp3">Bitte leer lassen</label><input id="hp3" type="text" name="webseite" tabindex="-1" autocomplete="off"></div>
+    <fieldset><legend>Wer fragt an</legend>
+      <div><label for="fa">Firma oder Organisation</label><input id="fa" name="firma" type="text" required></div>
+      <div style="margin-top:1rem"><label for="an">Ansprechpartner</label><input id="an" name="ansprechpartner" type="text" required></div>
+      <div style="margin-top:1rem"><label for="ae">E-Mail</label><input id="ae" name="email" type="email" required></div>
+      <div style="margin-top:1rem"><label for="at">Telefon</label><input id="at" name="telefon" type="tel"><p class="hint">Freiwillig. Für Rückfragen zum Termin oft der schnellere Weg.</p></div>
+      <div style="margin-top:1rem"><label for="aw">Webadresse</label><input id="aw" name="web" type="text" placeholder="beispiel.at"><p class="hint">Freiwillig. Hilft uns einzuschätzen, worum es geht.</p></div>
+    </fieldset>
+    <fieldset><legend>Das Vorhaben</legend>
+      <div><label for="av">Was haben Sie vor?</label><textarea id="av" name="vorhaben" required></textarea>
+        <p class="hint">Seminar, Klausur, Workshop, Retreat, Dreh. Zwei, drei Sätze genügen.</p></div>
+      <div style="margin-top:1rem"><label for="ap">Wie viele Menschen?</label><input id="ap" name="personen" type="text" required></div>
+      <div style="margin-top:1rem"><label for="ad">Wann, und für wie lange?</label><input id="ad" name="zeitraum" type="text" required><p class="hint">Auch ein grober Zeitraum reicht für den Anfang.</p></div>
+      <div style="margin-top:1rem"><label for="ab">Sonstiges, das wir wissen sollten</label><textarea id="ab" name="sonstiges" style="min-height:5.5rem"></textarea>
+        <p class="hint">Freiwillig. Etwa Übernachtung, Verpflegung, besondere Technik.</p></div>
+    </fieldset>
+    <div class="check"><input id="mensch3" name="mensch" type="checkbox" required><label for="mensch3">Ich bin ein Mensch.</label></div>
+    <div><button class="btn-solid" type="submit">Anfrage senden</button></div>
+    <p class="hint">Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht weitergegeben. Siehe <a href="datenschutz.html">Datenschutz</a>.</p>
+  </form>
+  <p style="margin-top:2rem"><a class="zurueck" href="vereinsheim.html">Zurück zum Vereinsheim</a></p>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="footcols">
+    <div>
+      <h4 style="letter-spacing:.24em;font-size:1rem">APOLLON</h4>
+      <p style="margin-top:.6rem;max-width:26rem">Entwicklung beginnt beim Menschen.</p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul class="footlinks">
+        <li><a href="wissen.html">Wissen</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="bodenplatte.html">Die Bodenplatte</a></li>
+        <li><a href="denkkreis.html">Der Denkkreis</a></li>
+        <li><a href="vereinsheim.html">Vereinsheim</a></li>
+        <li><a href="buch.html">Buch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Wege in Bewegung</h4>
+      <ul class="footlinks">
+        <li><a href="ausstieg.html">Der feminine Ausstieg</a></li>
+        <li><a href="ausstieg-impulsbuch.html">Das Impulsbuch</a></li>
+        <li><a href="konvaleszenz.html">Konvaleszenz</a></li>
+        <li><a href="https://t.me/apollondenkkreise" target="_blank" rel="noopener">Telegram: Apollon Denkkreise</a></li>
+        <li><a href="gespraech.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+    <span style="margin-left:auto">Wirtschaftsverein WIB, Wien</span>
+  </div>
+</div></footer>
+</body></html>

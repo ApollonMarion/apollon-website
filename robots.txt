@@ -1,0 +1,7 @@
+# Apollon
+User-agent: *
+Allow: /
+Disallow: /formular.php
+Disallow: /danke.html
+
+Sitemap: https://apollon.eu.com/sitemap.xml

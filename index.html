@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apollon | Entwicklung beginnt beim Menschen</title>
+<meta name="description" content="Apollon entwickelt Unternehmer. Wissen über Verein, EWIV und tragfähige Strukturen, der Denkkreis und ein Haus, in dem gearbeitet wird.">
+<link rel="stylesheet" href="assets/apollon.css?v=e0d6c51b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#022144">
+<link rel="stylesheet" href="assets/schriften.css"><link rel="preload" href="assets/fonts/karla-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Apollon","slogan":"Entwicklung beginnt beim Menschen.",
+"parentOrganization":{"@type":"Organization","name":"Wirtschaftsverein WIB Wege in Bewegung",
+"address":{"@type":"PostalAddress","streetAddress":"Prinz-Eugen-Straße 68","postalCode":"1040","addressLocality":"Wien","addressCountry":"AT"},
+"telephone":"+43 676 626 9486","email":"info@konvaleszenz.com"}}
+</script>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <a class="brandmark" href="index.html"><img src="assets/schwan.svg" alt="" width="34" height="34"><span class="wm">APOLLON</span></a>
+  <nav class="main" aria-label="Hauptnavigation"><span class="item"><a class="link" href="wissen.html">Wissen</a></span><span class="item"><a class="link" href="blog.html">Blog</a></span><span class="item has"><a class="link" href="entscheidung.html">Apollon</a><span class="submenu"><a href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a href="bodenplatte.html">Die Bodenplatte</a><a href="denkkreis.html">Der Denkkreis</a></span></span><span class="item"><a class="link" href="vereinsheim.html">Vereinsheim</a></span><span class="item"><a class="link" href="buch.html">Buch</a></span><span class="item has"><a class="link" href="ausstieg.html">WIB</a><span class="submenu"><a href="ausstieg.html">Der feminine Ausstieg</a><a href="ausstieg-bewerbung.html">Bewerbung</a><a href="ausstieg-impulsbuch.html">Impulsbuch</a><a href="konvaleszenz.html">Konvaleszenz</a></span></span></nav>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="handymenu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <a class="cta-btn" href="gespraech.html">Gespräch vereinbaren</a>
+</div>
+<nav class="handymenu" id="handymenu" aria-label="Menü"><a href="wissen.html">Wissen</a><a href="blog.html">Blog</a><span class="gruppe">Apollon</span><a class="unter" href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a class="unter" href="bodenplatte.html">Die Bodenplatte</a><a class="unter" href="denkkreis.html">Der Denkkreis</a><a href="vereinsheim.html">Vereinsheim</a><a href="buch.html">Buch</a><span class="gruppe">WIB</span><a class="unter" href="ausstieg.html">Der feminine Ausstieg</a><a class="unter" href="ausstieg-bewerbung.html">Bewerbung</a><a class="unter" href="ausstieg-impulsbuch.html">Impulsbuch</a><a class="unter" href="konvaleszenz.html">Konvaleszenz</a><a class="hervor" href="gespraech.html">Gespräch vereinbaren</a></nav>
+</div>
+<script>
+(function(){
+  var k = document.querySelector('.burger'), m = document.getElementById('handymenu');
+  if (!k || !m) return;
+  k.addEventListener('click', function(){
+    var offen = m.classList.toggle('offen');
+    k.classList.toggle('zu', offen);
+    k.setAttribute('aria-expanded', offen ? 'true' : 'false');
+    k.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && m.classList.contains('offen')) k.click();
+  });
+})();
+</script>
+<main>
+
+<div class="hero wrap">
+  <img class="swan" src="assets/schwan.svg" alt="Apollon" width="200" height="200">
+  <p class="wordmark">APOLLON</p>
+  <div class="rule"></div>
+  <p class="slogan">Entwicklung beginnt beim Menschen.</p>
+</div>
+<div class="divider"></div>
+
+<section><div class="wrap narrow" style="text-align:center">
+  <p class="kicker">Wenn eine Entscheidung ansteht</p>
+  <h2 style="max-width:22ch;margin:0 auto">Ihre Entscheidung braucht keine Mehrheit.</h2>
+  <p class="lead" style="margin-top:1.2rem">Die Menschen, die Ihnen ihre Meinung geben, tragen die Konsequenzen in der Regel nicht. Sie selbst tragen sie.</p>
+  <p style="max-width:38rem;margin:0 auto">Und auch nicht zu entscheiden ist eine Entscheidung. Nur trifft sie dann jemand anderes.</p>
+  <p style="margin-top:1.6rem"><a class="btn-outline" href="entscheidung.html">Wenn eine Entscheidung ansteht</a></p>
+</div></section>
+
+<div class="divider"></div>
+
+<section class="on-white">
+  <div class="wrap two">
+    <div><p class="kicker">Die Bodenplatte</p><h2>Ihr Unternehmen läuft. Und trotzdem stimmt etwas nicht.</h2></div>
+    <div class="body-col">
+      <p class="lead">Meistens liegt es nicht an dem, was oben sichtbar ist. Es liegt an dem, was darunter fehlt.</p>
+      <p>Bevor man ein Haus baut, zieht man eine Bodenplatte ein. Bei Unternehmen macht das fast niemand. Man gründet, wächst, stellt ein, und irgendwann trägt die Konstruktion das nicht mehr, was auf ihr steht.</p>
+      <p>Das liegt selten daran, dass jemand etwas falsch gemacht hätte. Es liegt an dem, was im Alltag liegen geblieben ist. Aufgeschoben, vertagt, im Lärm der nächsten Woche untergegangen.</p>
+      <p>Wir schauen uns Ihre Situation an. Und wenn Sie mögen, ziehen wir in drei bis vier Stunden eine Bodenplatte aus Wissen bei Ihnen ein. Danach können Sie in Ruhe entscheiden, ob alles so bleiben soll, wie es ist, oder ob Sie etwas verändern wollen.</p>
+      <p style="margin-top:1.6rem"><a class="btn-outline" href="bodenplatte.html">Die Bodenplatte</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap"><div class="denkkreis">
+    <p class="kicker">Der Denkkreis</p>
+    <p class="teaser">Manche Gespräche verändern ein Unternehmen. Andere verändern den Unternehmer.</p>
+    <div class="rule"></div>
+    <ul class="facts"><li>16. und 17. Oktober 2026</li><li>Lengede</li><li>Zwölf Plätze</li><li>Bewerbung</li></ul>
+    <p style="max-width:36rem;margin:0 auto 1.8rem">Kein Seminar. Kein Programm, das wir hier ausbreiten. Zwölf Unternehmer, zwei Tage, ein Haus. Hier wird nicht zugehört und wieder vergessen, hier wird miteinander gearbeitet. Was in diesen zwei Tagen entsteht, ist zu kostbar, um es vorher zu erklären.</p>
+    <a class="btn-light" href="denkkreis.html">Bewerben</a>
+  </div></div>
+</section>
+
+<section class="on-white">
+  <div class="wrap">
+    <p class="kicker pill">Wissen</p>
+    <h2 style="max-width:20ch">Alles, was wir wissen, steht offen da.</h2>
+    <p class="lead" style="max-width:40rem;margin-top:1rem">Weil Wissen, das in einem Kopf bleibt, mit diesem Kopf verschwindet.</p>
+    <p style="max-width:40rem">Wir erfinden dabei nichts Neues. Wir arbeiten mit Werkzeugen, die es seit Ewigkeiten gibt, und wir wissen, wie man sie richtig benutzt.</p>
+    <div class="three" style="margin-top:2.4rem">
+      <article class="card"><h3>Der Verein als Werkzeug</h3><p>Gründung, Statuten, Organe, Rechnungen, Gemeinnützigkeit. Erklärt so, wie man es einem Menschen erklärt und nicht einer Behörde.</p><a class="more" href="wissen-verein.html">Zum Vereinswissen</a></article>
+      <article class="card"><h3>Die EWIV, verständlich</h3><p>Die Europäische wirtschaftliche Interessenvereinigung. Ein mächtiges Werkzeug, über das kaum jemand verständlich schreibt.</p><a class="more" href="wissen-ewiv.html">Zur EWIV</a></article>
+      <article class="card"><h3>Der Körper liest mit</h3><p>Was Druck, Haltung und Füße über einen Menschen erzählen. Die Grundlage der Arbeit in der Konvaleszenz.</p><a class="more" href="wissen-koerper.html">Zum Körperwissen</a></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Das Vereinsheim</p>
+    <h2 style="max-width:24ch">Es gibt Räume, in denen man arbeitet. Und Räume, in denen man denkt.</h2>
+    <p class="lead" style="max-width:40rem;margin-top:1rem">Unser Haus in Lengede ist das zweite. Kein Tagungshotel, sondern ein Ort mit einem langen Holztisch und einer Glasfront zum Garten.</p>
+    <div style="margin-top:2rem"><div class="gallery"><figure><button type="button"><img src="assets/bilder/vereinsheim_aussen.jpg" alt="Das Vereinsheim von außen" loading="lazy"></button><figcaption>Das Haus</figcaption></figure><figure><button type="button"><img src="assets/bilder/vereinsheim_seminarraum.jpg" alt="Seminarraum mit langem Holztisch und Flipchart" loading="lazy"></button><figcaption>Der Seminarraum</figcaption></figure><figure><button type="button"><img src="assets/bilder/vereinsheim_wohnraum.jpg" alt="Wohnbereich mit Fensterfront zum Garten" loading="lazy"></button><figcaption>Der Wohnbereich</figcaption></figure><figure><button type="button"><img src="assets/bilder/vereinsheim_badezimmer.jpg" alt="Badezimmer" loading="lazy"></button><figcaption>Das Bad</figcaption></figure></div><p style="margin-top:.9rem;font-size:.85rem;color:var(--ink-faint)">Bild anklicken für die große Ansicht.</p></div>
+    <p style="margin-top:1.6rem"><a class="btn-outline" href="vereinsheim.html">Zum Vereinsheim</a> <span style="color:var(--ink-faint);font-size:.9rem;margin-left:.6rem">250 &euro; pro Tag</span></p>
+  </div>
+</section>
+
+<section class="on-white">
+  <div class="wrap two">
+    <div><a href="https://www.amazon.de/dp/369635953X" target="_blank" rel="noopener" style="display:block;text-decoration:none;max-width:300px">
+<img src="assets/bilder/buchcover.jpg" alt="Buchcover: Erste Person von Marion Bernard" width="300" height="425" style="border-radius:3px;box-shadow:0 18px 40px -22px rgba(2,33,68,.65)">
+</a></div>
+    <div class="body-col">
+      <p class="kicker">Das Buch</p>
+      <h2>Erste Person</h2>
+      <p class="lead" style="margin-top:1rem">Warum wir uns selbst verlassen und wie wir zurückkehren.</p>
+      <p>Marion Bernard beobachtet darin, wie Menschen sich den ganzen Tag lang selbst moderieren. Wie sie sich zurechtlegen, anpassen, erklären. Und was passiert, wenn sie damit aufhören.</p>
+      <p style="margin-top:1.4rem"><a class="btn-outline" href="buch.html">Zum Buch</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Wege in Bewegung</p>
+    <h2 style="max-width:24ch">Der Wirtschaftsverein WIB hat zurzeit zwei Großprojekte.</h2>
+    <div class="two" style="margin-top:2.2rem">
+      <article class="card"><h3>Der feminine Ausstieg</h3><p>Für Frauen im Übergang zwischen Abschied und Aufbruch. Souveränität statt Abhängigkeit, in drei Stufen begleitet, von der Entscheidung bis zur Verankerung.</p><p style="margin-top:.8rem;font-style:italic;color:var(--navy);font-family:var(--f-d);font-size:1.2rem">&bdquo;Irgendwann ist kein Datum.&ldquo;</p><a class="more" href="ausstieg.html">Zum femininen Ausstieg</a></article>
+      <article class="card"><h3>Konvaleszenz</h3><p>Fußlesung und Mentoring in Wien. Für Menschen, die verstehen wollen, was hinter einem Symptom steckt, statt es zu bekämpfen.</p><p style="margin-top:.8rem;font-style:italic;color:var(--navy);font-family:var(--f-d);font-size:1.2rem">&bdquo;Wer eine schnelle Lösung sucht, ist hier nicht richtig.&ldquo;</p><a class="more" href="konvaleszenz.html">Zur Konvaleszenz</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="on-navy">
+  <div class="wrap narrow" style="text-align:center">
+    <p class="kicker">Der nächste Schritt</p>
+    <h2>Ein Gespräch.</h2>
+    <p style="margin-top:1.2rem">Kein Verkaufstermin und kein Vortrag. Sie erzählen, was gerade ansteht, und wir sagen Ihnen ehrlich, wie wir Ihnen dabei helfen können.</p>
+    <p style="margin-top:1.6rem"><a class="btn-light" href="gespraech.html">Gespräch vereinbaren</a></p>
+    <p style="margin-top:1.4rem;font-size:.86rem;color:#93A6BC">Sagen Sie vorab kurz, worum es geht. Dann gehen wir vorbereitet in das Gespräch.</p>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Große Bildansicht">
+  <button class="x" type="button" aria-label="Schließen">&#10005;</button>
+  <button class="nav prev" type="button" aria-label="Vorheriges Bild">&#8249;</button>
+  <img alt=""><button class="nav next" type="button" aria-label="Nächstes Bild">&#8250;</button>
+  <div class="cap"></div>
+</div>
+<script>
+(function(){var b=[].slice.call(document.querySelectorAll('.gallery button')),l=document.getElementById('lb');
+if(!l||!b.length)return;var im=l.querySelector('img'),c=l.querySelector('.cap'),i=0;
+function s(n){i=(n+b.length)%b.length;var x=b[i].querySelector('img');im.src=x.src;im.alt=x.alt;
+c.textContent=b[i].closest('figure').querySelector('figcaption').textContent;l.classList.add('open');}
+b.forEach(function(x,n){x.addEventListener('click',function(){s(n);});});
+l.querySelector('.x').addEventListener('click',function(){l.classList.remove('open');});
+l.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation();s(i-1);});
+l.querySelector('.next').addEventListener('click',function(e){e.stopPropagation();s(i+1);});
+l.addEventListener('click',function(e){if(e.target===l)l.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(!l.classList.contains('open'))return;
+if(e.key==='Escape')l.classList.remove('open');if(e.key==='ArrowRight')s(i+1);if(e.key==='ArrowLeft')s(i-1);});})();
+</script>
+</main>
+<footer><div class="wrap">
+  <div class="footcols">
+    <div>
+      <h4 style="letter-spacing:.24em;font-size:1rem">APOLLON</h4>
+      <p style="margin-top:.6rem;max-width:26rem">Entwicklung beginnt beim Menschen.</p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul class="footlinks">
+        <li><a href="wissen.html">Wissen</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="bodenplatte.html">Die Bodenplatte</a></li>
+        <li><a href="denkkreis.html">Der Denkkreis</a></li>
+        <li><a href="vereinsheim.html">Vereinsheim</a></li>
+        <li><a href="buch.html">Buch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Wege in Bewegung</h4>
+      <ul class="footlinks">
+        <li><a href="ausstieg.html">Der feminine Ausstieg</a></li>
+        <li><a href="ausstieg-impulsbuch.html">Das Impulsbuch</a></li>
+        <li><a href="konvaleszenz.html">Konvaleszenz</a></li>
+        <li><a href="https://t.me/apollondenkkreise" target="_blank" rel="noopener">Telegram: Apollon Denkkreise</a></li>
+        <li><a href="gespraech.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+    <span style="margin-left:auto">Wirtschaftsverein WIB, Wien</span>
+  </div>
+</div></footer>
+</body></html>

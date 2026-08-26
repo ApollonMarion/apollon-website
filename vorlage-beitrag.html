@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITEL}} | Apollon</title>
+<meta name="description" content="{{VORSPANN_KURZ}}">
+<link rel="stylesheet" href="assets/apollon.css?v=e0d6c51b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#022144">
+<link rel="stylesheet" href="assets/schriften.css"><link rel="preload" href="assets/fonts/karla-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <a class="brandmark" href="index.html"><img src="assets/schwan.svg" alt="" width="34" height="34"><span class="wm">APOLLON</span></a>
+  <nav class="main" aria-label="Hauptnavigation"><span class="item"><a class="link" href="wissen.html">Wissen</a></span><span class="item"><a class="link" href="blog.html" aria-current="page">Blog</a></span><span class="item has"><a class="link" href="entscheidung.html">Apollon</a><span class="submenu"><a href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a href="bodenplatte.html">Die Bodenplatte</a><a href="denkkreis.html">Der Denkkreis</a></span></span><span class="item"><a class="link" href="vereinsheim.html">Vereinsheim</a></span><span class="item"><a class="link" href="buch.html">Buch</a></span><span class="item has"><a class="link" href="ausstieg.html">WIB</a><span class="submenu"><a href="ausstieg.html">Der feminine Ausstieg</a><a href="ausstieg-bewerbung.html">Bewerbung</a><a href="ausstieg-impulsbuch.html">Impulsbuch</a><a href="konvaleszenz.html">Konvaleszenz</a></span></span></nav>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="handymenu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <a class="cta-btn" href="gespraech.html">Gespräch vereinbaren</a>
+</div>
+<nav class="handymenu" id="handymenu" aria-label="Menü"><a href="wissen.html">Wissen</a><a href="blog.html" aria-current="page">Blog</a><span class="gruppe">Apollon</span><a class="unter" href="entscheidung.html">Wenn eine Entscheidung ansteht</a><a class="unter" href="bodenplatte.html">Die Bodenplatte</a><a class="unter" href="denkkreis.html">Der Denkkreis</a><a href="vereinsheim.html">Vereinsheim</a><a href="buch.html">Buch</a><span class="gruppe">WIB</span><a class="unter" href="ausstieg.html">Der feminine Ausstieg</a><a class="unter" href="ausstieg-bewerbung.html">Bewerbung</a><a class="unter" href="ausstieg-impulsbuch.html">Impulsbuch</a><a class="unter" href="konvaleszenz.html">Konvaleszenz</a><a class="hervor" href="gespraech.html">Gespräch vereinbaren</a></nav>
+</div>
+<script>
+(function(){
+  var k = document.querySelector('.burger'), m = document.getElementById('handymenu');
+  if (!k || !m) return;
+  k.addEventListener('click', function(){
+    var offen = m.classList.toggle('offen');
+    k.classList.toggle('zu', offen);
+    k.setAttribute('aria-expanded', offen ? 'true' : 'false');
+    k.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen');
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && m.classList.contains('offen')) k.click();
+  });
+})();
+</script>
+<main>
+<div class="pagehead"><div class="wrap"><p class="crumbs"><a href="index.html">Apollon</a> &rsaquo; <a href="blog.html">Blog</a> &rsaquo; Beitrag</p><p class="kicker">Blog</p><h1>{{TITEL}}</h1><p class="intro">{{VORSPANN}}</p></div></div><div class="wrap" style="padding-top:1.4rem"><a class="zurueck" href="blog.html">Zurück zur Übersicht</a></div><section class="on-white" style="padding-top:1.6rem"><div class="wrap"><p class="stand">{{DATUM}}</p><div class="prose">{{TEXT}}</div><div class="byline"><span>Geschrieben von <strong>Marion Bernard</strong>. Sie begleitet Unternehmer dabei, ihre Struktur tragfähig zu machen, und errichtet seit Jahren Vereine, Stiftungen und Verbünde. <a href="bodenplatte.html">Mehr über die Arbeit dahinter</a></span></div></div></section><section class="on-navy"><div class="wrap narrow" style="text-align:center"><p class="kicker">Kein fertiger Plan nötig</p><h2>Ein Gespräch.</h2><p style="margin-top:1.2rem">Sie erzählen, wo Sie stehen. Wir schauen gemeinsam darauf, was bereits da ist und was daraus entstehen kann.</p><p style="margin-top:1.6rem"><a class="btn-light" href="gespraech.html">Gespräch vereinbaren</a></p></div></section></main>
+<footer><div class="wrap">
+  <div class="footcols">
+    <div>
+      <h4 style="letter-spacing:.24em;font-size:1rem">APOLLON</h4>
+      <p style="margin-top:.6rem;max-width:26rem">Entwicklung beginnt beim Menschen.</p>
+    </div>
+    <div>
+      <h4>Seiten</h4>
+      <ul class="footlinks">
+        <li><a href="wissen.html">Wissen</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="bodenplatte.html">Die Bodenplatte</a></li>
+        <li><a href="denkkreis.html">Der Denkkreis</a></li>
+        <li><a href="vereinsheim.html">Vereinsheim</a></li>
+        <li><a href="buch.html">Buch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Wege in Bewegung</h4>
+      <ul class="footlinks">
+        <li><a href="ausstieg.html">Der feminine Ausstieg</a></li>
+        <li><a href="ausstieg-impulsbuch.html">Das Impulsbuch</a></li>
+        <li><a href="konvaleszenz.html">Konvaleszenz</a></li>
+        <li><a href="https://t.me/apollondenkkreise" target="_blank" rel="noopener">Telegram: Apollon Denkkreise</a></li>
+        <li><a href="gespraech.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+    <span style="margin-left:auto">Wirtschaftsverein WIB, Wien</span>
+  </div>
+</div></footer>
+</body></html>
