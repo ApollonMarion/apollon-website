@@ -3,5 +3,8 @@ User-agent: *
 Allow: /
 Disallow: /formular.php
 Disallow: /danke.html
+Disallow: /vorschau-
+Disallow: /bearbeiten.php
+Disallow: /posteingang.php
 
 Sitemap: https://apollon.eu.com/sitemap.xml
