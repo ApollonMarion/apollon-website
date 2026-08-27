@@ -1,5 +1,5 @@
 {
- "stand": "2026-08-27 09:27",
+ "stand": "",
  "dateien": {
   "assets/apollon-512.png": "b0345dec43d996c550104dc72a1b4444daa87bcf0f2276fa4e1383d71cb56eb2",
   "assets/apollon.css": "947cfe9bed2f6e2ec1705bcc48dff94be1d6328cd27b4dd0badefd4ad03cf5f0",
@@ -40,6 +40,7 @@
   "denkkreis.html": "ef645216a37bd9caee379d3f58e0953a11a5687350a812f4aae448bb061abd22",
   "entscheidung.html": "aa9423f9dabde98cb4f8c9888a6386cd676ab07ffcdffc06a46d61677bf17fb7",
   "favicon.ico": "ec860cf5037dac3ee236bf4126205d5387a34cac05b9e9aec25fa4e3e51b972f",
+  "freigabe/plan.json": "f018b69e714e41215b7e9101fa5d72e66a11345ddb01c24039054029d6be3e08",
   "gespraech.html": "93e619e8abba13c3f5fe59098116ace1f61ee3a22a5281a6a8a40af5044fdc5a",
   "htaccess.txt": "5b0d1384042daa07b9fdb5738686811603a9f90707f8a7e59e371c9472c93f0e",
   "impressum.html": "d55d87190b384eb2c20766aeca4cd8e00eb4d3cad43d76b1edfe3034cfc2e169",
@@ -51,9 +52,12 @@
   "sitemap.xml": "548862ca119e18939de183e4f15fe445ccbdda7f74c99371acc46159988756b3",
   "vereinsheim-anfrage.html": "dbb326e6357a80fe1da078cca1500c6b5132c52126ea9d60b825542fc55db098",
   "vereinsheim.html": "14ce2d3b96cdc7ac4eed1b0e9bc670000e8111656c1a758ae7fc0c68a102758d",
+  "versendet.json": "52991670497c6d5c8c02d388be155e5aa3155cd9a19cec310953ad6f9e8dcb7d",
   "vorlage-beitrag.html": "4e0c15e91eb1651c019f3e37ef9cc59e90cb5859b04b130a641c36328e71f87e",
   "vorschau-4e9418616d643f3dee5d.html": "5f08a13933bd4bbb0c11f65a9ef02b089c0cfde373c958c0e416daa3ecd6bb33",
   "vorschau-6b25dc19772271052ff9.html": "f2bcd6801c2f3da09bb6eeeea6b07f3c72a6e7044b746773a2fb2d2524bc540a",
+  "vorschau-fertig-34-unternehmer.html": "da8006e694da2441336bcbf4880b5ef2861acc37436b235be3f44b6c06e1f6e7",
+  "vorschau-freigabe-34-unternehmer.html": "9005c1b6977beec4718df0a80176905433a01cf09e21e7927f1f4a26c1c08d24",
   "wissen-ewiv.html": "e96bb1a17d8d574f09eddd3adb08079a5518f5c5d3604e395f03ef757a1a4f85",
   "wissen-koerper-druck.html": "40fd2939a88ebbae93b1c2d479923e93cf99dc76e6d15645a5c85b664ad36231",
   "wissen-koerper-fusslesung.html": "5e787c454bc3ae0bc7fe2709ccf13a398e004caa1e13037d151eea53d1a05ba3",
