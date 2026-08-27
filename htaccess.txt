@@ -2,6 +2,9 @@
 
 # Immer verschluesselt ausliefern
 RewriteEngine On
+# Der Abholdienst wird vom Cronjob des Servers ueber http aufgerufen.
+# Damit dort keine Umleitung im Weg steht, ist er ausgenommen.
+RewriteCond %{REQUEST_URI} !^/holen\.php$
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
