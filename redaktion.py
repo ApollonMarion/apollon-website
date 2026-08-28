@@ -1,0 +1,186 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Baut die Vorschauseite fuer Marion.
+
+Der Entwurf steht so da, wie er spaeter aussieht. Darunter drei Dinge:
+ein Knopf zum Freigeben, ein Feld fuer Aenderungen, ein Feld fuer das,
+was Marion gerade beschaeftigt, samt meinen Vorschlaegen fuer naechste Woche.
+"""
+import os, json
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+KENNUNG = "4e9418616d643f3dee5d"
+DATEI = "vorschau-%s.html" % KENNUNG
+
+# ---------------------------------------------------------------- der Entwurf
+TITEL = 'Fünf Betriebe wollen zusammenarbeiten. Wie fängt man an?'
+VORSPANN = 'Über den ersten Schritt, an dem die meisten Kooperationen scheitern, bevor sie begonnen haben.'
+
+KURZ = 'Fünf Unternehmer nicken, finden es richtig, und drei Monate später ist nichts passiert. Nicht weil die Idee schlecht war, sondern weil niemand wusste, was der nächste Schritt ist. Er ist einfacher, als die meisten denken: drei Fragen, ein Blatt Papier, und erst ganz am Ende die Frage nach der Rechtsform.'
+
+ARTIKEL = """<h3>Der Moment, in dem alle nicken</h3><p>Sie kennen die Situation vielleicht.</p><p>Fünf Unternehmer sitzen beisammen. Jemand sagt den Satz: Eigentlich könnten wir doch zusammen etwas machen.</p><p>Alle nicken.</p><p>Alle finden es richtig.</p><p>Und dann passiert drei Monate lang nichts.</p><p>Nicht, weil die Idee schlecht war. Sondern weil niemand wusste, was der nächste Schritt ist.</p><h3>Warum es liegen bleibt</h3><p>Meistens passiert eines von zwei Dingen.</p><p>Entweder wird sofort über die Rechtsform gesprochen. Verein, GmbH, Genossenschaft, EWIV. Dann sitzen fünf Menschen zusammen und diskutieren über Satzungen, obwohl noch keiner sagen kann, wofür.</p><p>Oder es wird gar nichts entschieden. Man wartet, dass jemand anfängt. Und weil alle warten, fängt niemand an.</p><p>Beides führt zum selben Ergebnis.</p><h3>Der Schritt, der wirklich zuerst kommt</h3><p>Bevor Sie über Struktur reden, brauchen Sie eine Liste.</p><p>Nicht eine Vision. Nicht ein Leitbild. Eine Liste.</p><p>Setzen Sie sich hin und schreiben Sie zu jedem Beteiligten drei Dinge auf:</p><p>Was kostet mich jedes Jahr Geld, obwohl ich es nicht allein bräuchte?</p><p>Was kann ich, das den anderen fehlt?</p><p>Was fehlt mir, das ein anderer hat?</p><p>Fünf Menschen, drei Fragen, fünfzehn Antworten. Mehr braucht es für den Anfang nicht.</p><h3>Was dabei sichtbar wird</h3><p>Ich habe das oft erlebt: Beim Vorlesen dieser Listen wird es im Raum still.</p><p>Weil plötzlich schwarz auf weiß dasteht, was alle geahnt haben.</p><p>Drei von fünf zahlen für dieselbe Software.</p><p>Vier von fünf suchen jemanden für die Buchhaltungsvorbereitung.</p><p>Zwei haben Maschinen, die die meiste Zeit stehen.</p><p>Einer hat einen Kontakt, auf den ein anderer seit zwei Jahren wartet.</p><p>Das ist kein Konzept. Das sind einfach Tatsachen, die vorher nur niemand nebeneinandergelegt hat.</p><h3>Dann wird gerechnet, nicht geträumt</h3><p>Nehmen Sie die zwei oder drei größten Übereinstimmungen und rechnen Sie sie durch.</p><p>Was zahlt jeder heute dafür?</p><p>Was würde eine gemeinsame Lösung kosten?</p><p>Was bleibt übrig?</p><p>Diese Rechnung ist der eigentliche Prüfstein. Wenn am Ende für jeden Einzelnen ein spürbarer Vorteil steht, trägt die Sache. Wenn nicht, ist es eine nette Idee, aber keine Zusammenarbeit.</p><p>Zusammenarbeit hält nicht durch Sympathie. Sie hält durch Nutzen.</p><h3>Fangen Sie klein an</h3><p>Der zweite häufige Fehler: zu groß beginnen.</p><p>Fünf Betriebe wollen alles gemeinsam machen, gründen etwas Großes, und nach einem halben Jahr ist die Luft raus, weil sich niemand mehr auskennt.</p><p>Nehmen Sie eine Sache. Eine einzige.</p><p>Den gemeinsamen Einkauf. Oder die eine Person, die für alle die Verwaltung vorbereitet. Oder das eine Projekt, das keiner allein annehmen könnte.</p><p>Machen Sie diese eine Sache sechs Monate lang. Danach wissen Sie mehr über die Zusammenarbeit als aus jedem Konzeptpapier.</p><h3>Vier Dinge, die vorher geklärt sein sollten</h3><p>Auch bei einer kleinen Sache lohnen sich vier Sätze auf Papier.</p><p>Wer entscheidet, wenn es schnell gehen muss?</p><p>Wie wird abgerechnet, wer zahlt was?</p><p>Was passiert, wenn einer aussteigt?</p><p>Und was passiert, wenn ein Sechster dazukommen möchte?</p><p>Das sind keine juristischen Fragen. Das sind Fragen unter Erwachsenen. Wer sie am Anfang beantwortet, muss sie später nicht im Streit klären.</p><h3>Und erst jetzt die Rechtsform</h3><p>Wenn Sie diese vier Fragen beantwortet haben, wissen Sie meistens von selbst, was für eine Hülle Sie brauchen.</p><p>Manchmal braucht es gar keine, weil eine Vereinbarung reicht.</p><p>Manchmal ist es ein Verein, weil mehrere Beteiligte gemeinsam etwas tragen wollen, ohne dass einer alles besitzt.</p><p>Manchmal arbeiten Betriebe über Landesgrenzen hinweg, dann wird eine EWIV interessant.</p><p>Die Rechtsform ist ein Werkzeug. Werkzeug sucht man aus, wenn man weiß, was gebaut werden soll, nicht vorher.</p><h3>Was Sie diese Woche tun können</h3><p>Nehmen Sie die drei Fragen von oben.</p><p>Beantworten Sie sie für sich selbst, in zwanzig Minuten, auf einem Blatt Papier.</p><p>Und dann überlegen Sie, wen Sie kennen, dessen Antworten zu Ihren passen könnten.</p><p>Mehr ist es nicht. Genau da fangen diese Dinge an.</p>"""
+
+QUELLEN = []
+
+VORSCHLAEGE = [('Wenn einer aussteigen will', 'Der unangenehmste Teil jeder Zusammenarbeit, und der, den keiner vorher regelt.'), ('Was ein Verein kann, was eine GmbH nicht kann', 'Der Vergleich, den Unternehmer am häufigsten falsch im Kopf haben.'), ('Der Betrieb, der übergeben werden soll', 'Nachfolge ist keine Frage des Alters, sondern der Struktur.')]
+
+
+
+def bauen():
+    quellen = "".join(
+        '<li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (u, t)
+        for t, u in QUELLEN)
+    vorschlaege = "".join(
+        '<label class="vorschlag"><input type="radio" name="naechstes" value="%s">'
+        '<span><strong>%s</strong><em>%s</em></span></label>' % (t, t, b)
+        for t, b in VORSCHLAEGE)
+
+    html = """<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Blogvorschlag zur Durchsicht | Apollon</title>
+<link rel="stylesheet" href="assets/apollon.css">
+<link rel="stylesheet" href="assets/schriften.css">
+<style>
+.redaktion{background:var(--navy);color:#D7DEE8;padding:1rem 0}
+.redaktion .wrap{display:flex;gap:1rem;align-items:baseline;flex-wrap:wrap}
+.redaktion p{margin:0;font-size:.92rem}
+.redaktion strong{color:#fff}
+.entwurf{border:1px dashed var(--gold-line);border-radius:5px;padding:1.6rem 1.4rem;background:var(--white);margin-top:1.6rem}
+.entwurf-marke{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 1rem}
+.vorschlag{display:flex;gap:.7rem;align-items:flex-start;padding:.9rem 1rem;background:var(--white);border:1px solid var(--line);border-radius:4px;margin-bottom:.6rem;cursor:pointer}
+.vorschlag:hover{border-color:var(--gold-line)}
+.vorschlag input{margin-top:.35rem;flex:0 0 auto}
+.vorschlag span{display:block}
+.vorschlag strong{display:block;color:var(--navy);font-size:1rem}
+.vorschlag em{display:block;font-style:normal;font-size:.9rem;color:var(--ink-soft);margin-top:.2rem}
+.freigabe{background:var(--gold-wash);border:1px solid var(--gold-line);border-radius:5px;padding:1.2rem 1.4rem;margin:2rem 0}
+.freigabe p{margin:0 0 .8rem;color:#4E3D12}
+</style>
+</head>
+<body>
+
+<div class="redaktion"><div class="wrap">
+  <p><strong>Blogvorschlag zur Durchsicht.</strong> Diese Seite ist nicht öffentlich und steht in keiner Suchmaschine.</p>
+</div></div>
+
+<div class="pagehead"><div class="wrap">
+  <p class="kicker">Donnerstag, 27. August 2026</p>
+  <h1>%(titel)s</h1>
+  <p class="intro">%(vorspann)s</p>
+</div></div>
+
+<section class="on-white"><div class="wrap">
+  <div class="entwurf">
+    <p class="entwurf-marke">So sieht der Beitrag aus, wenn er online geht</p>
+    <div class="kurz"><strong>Kurz gesagt</strong><p>%(kurz)s</p></div>
+    <div class="prose">%(artikel)s</div>
+    <div class="quellen"><h3>Woher die Zahlen stammen</h3><ul>%(quellen)s</ul></div>
+  </div>
+</div></section>
+
+<section><div class="wrap narrow">
+  <form class="apo" method="post" action="formular.php">
+    <input type="hidden" name="formular" value="Blogvorschlag, Rückmeldung von Marion">
+    <input type="hidden" name="beitrag" value="%(titel)s">
+    <input type="hidden" name="email" value="info@wirtschaftsverein-apollon.net">
+    <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="hp9">Bitte leer lassen</label><input id="hp9" type="text" name="webseite" tabindex="-1" autocomplete="off"></div>
+
+    <div class="freigabe">
+      <p><strong>Wenn nichts zu ändern ist:</strong> ein Klick genügt, und der Beitrag geht am Dienstag online.</p>
+      <label style="display:flex;gap:.6rem;align-items:center;cursor:pointer">
+        <input type="checkbox" name="freigabe" value="ja">
+        <span>Passt so. Bitte veröffentlichen.</span>
+      </label>
+    </div>
+
+    <fieldset><legend>Was soll geändert werden?</legend>
+      <textarea name="aenderungen" style="min-height:9rem"></textarea>
+      <p class="hint">Frei heraus. Stichworte genügen, diktiert genügt auch. Wenn oben der Haken gesetzt ist, kann dieses Feld leer bleiben.</p>
+    </fieldset>
+
+    <fieldset><legend>Was beschäftigt dich gerade?</legend>
+      <textarea name="beschaeftigt" style="min-height:9rem"></textarea>
+      <p class="hint">Was dir diese Woche in Gesprächen begegnet ist, was dich ärgert, was du siehst. Daraus entstehen die nächsten Beiträge.</p>
+
+      <p style="margin:1.6rem 0 .8rem;font-weight:700;color:var(--navy)">Und das hier würde ich vorschlagen, wenn dir gerade nichts einfällt:</p>
+      %(vorschlaege)s
+      <label class="vorschlag"><input type="radio" name="naechstes" value="anderes">
+        <span><strong>Etwas anderes</strong><em>Dann schreib es einfach oben in das Feld.</em></span></label>
+    </fieldset>
+
+    <div><label for="wer">Von</label><input id="wer" name="name" type="text" value="Marion" required></div>
+    <div class="check" style="margin-top:1rem"><input id="m9" name="mensch" type="checkbox" required checked><label for="m9">Ich bin ein Mensch.</label></div>
+    <div style="margin-top:1.2rem"><button class="btn-solid" type="submit">Rückmeldung abschicken</button></div>
+    <p class="leise" style="margin-top:.8rem">Alles, was hier steht, wird im Browser mitgeschrieben und bleibt auch nach dem Abschicken erhalten. Falls etwas schiefgeht, ist der Text beim nächsten Öffnen dieser Seite wieder da. <a href="#" id="entwurf-leeren">Felder leeren</a></p>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="legal"><span>Apollon, interne Vorschau</span><span style="margin-left:auto">Nicht öffentlich</span></div>
+</div></footer>
+
+<script>
+/// Sicherung: Alles, was getippt wird, bleibt im Browser erhalten,
+// auch wenn die Seite geschlossen oder neu geladen wird.
+(function(){
+  var f = document.querySelector("form.apo");
+  if (!f) return;
+  var schluessel = "apollon-entwurf-" + location.pathname;
+  var felder = f.querySelectorAll("textarea, input[type=checkbox], input[type=radio], input[type=text]");
+
+  try {
+    var gesichert = JSON.parse(localStorage.getItem(schluessel) || "{}");
+    felder.forEach(function(el){
+      var k = el.name + "|" + (el.value || "");
+      if (el.type === "checkbox" || el.type === "radio") {
+        if (gesichert[k] === true) el.checked = true;
+      } else if (typeof gesichert[el.name] === "string" && gesichert[el.name] !== "") {
+        el.value = gesichert[el.name];
+      }
+    });
+  } catch(e){}
+
+  function sichern(){
+    try {
+      var d = {};
+      felder.forEach(function(el){
+        if (el.type === "checkbox" || el.type === "radio") {
+          if (el.checked) d[el.name + "|" + (el.value || "")] = true;
+        } else {
+          d[el.name] = el.value;
+        }
+      });
+      localStorage.setItem(schluessel, JSON.stringify(d));
+    } catch(e){}
+  }
+  f.addEventListener("input", sichern);
+  f.addEventListener("change", sichern);
+  // Der Entwurf wird bewusst NICHT geloescht, auch nicht nach dem Abschicken.
+  // Er bleibt stehen, bis er von Hand geleert wird. Lieber einmal zu viel
+  // aufgehoben als einmal zu wenig.
+  var leeren = document.getElementById("entwurf-leeren");
+  if (leeren) {
+    leeren.addEventListener("click", function(e){
+      e.preventDefault();
+      try { localStorage.removeItem(schluessel); } catch(err){}
+      f.reset();
+    });
+  }
+  sichern();
+})();
+</script>
+</body></html>
+""" % dict(titel=TITEL, vorspann=VORSPANN, kurz=KURZ, artikel=ARTIKEL,
+           quellen=quellen, vorschlaege=vorschlaege)
+
+    with open(os.path.join(HERE, DATEI), "w", encoding="utf-8") as f:
+        f.write(html)
+    print("Vorschauseite gebaut:", DATEI)
+
+
+if __name__ == "__main__":
+    bauen()
